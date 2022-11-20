@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://MainMenu.gd" type="Script" id=2]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 112.0, 316.0 ],
+"_edit_vertical_guides_": [ 75.0, 346.0, 263.0, 534.0, 627.0, 815.0 ]
+}
+
+[node name="Start" type="Button" parent="."]
+margin_left = 74.0
+margin_top = 111.0
+margin_right = 264.0
+margin_bottom = 211.0
+custom_fonts/font = ExtResource( 1 )
+text = "Играть"
+
+[node name="Deck" type="Button" parent="."]
+margin_left = 345.0
+margin_top = 111.0
+margin_right = 535.0
+margin_bottom = 211.0
+custom_fonts/font = ExtResource( 1 )
+text = "Колода"
+
+[node name="Shop" type="Button" parent="."]
+margin_left = 626.0
+margin_top = 111.0
+margin_right = 816.0
+margin_bottom = 211.0
+custom_fonts/font = ExtResource( 1 )
+text = "Магазин"
+
+[node name="Stock" type="Button" parent="."]
+margin_left = 74.0
+margin_top = 314.0
+margin_right = 264.0
+margin_bottom = 414.0
+custom_fonts/font = ExtResource( 1 )
+text = "Биржа"
+
+[node name="Trade" type="Button" parent="."]
+margin_left = 345.0
+margin_top = 315.0
+margin_right = 535.0
+margin_bottom = 415.0
+custom_fonts/font = ExtResource( 1 )
+text = "Обмен"
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 626.0
+margin_top = 315.0
+margin_right = 816.0
+margin_bottom = 415.0
+custom_fonts/font = ExtResource( 1 )
+text = "Выход"
+
+[connection signal="button_down" from="Start" to="." method="_on_Start_button_down"]
+[connection signal="button_down" from="Exit" to="." method="_on_Exit_button_down"]
